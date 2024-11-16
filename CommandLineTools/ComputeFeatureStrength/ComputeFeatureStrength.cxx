@@ -157,7 +157,6 @@ int main( int argc, char *argv[] )
   multiScaleFilter->SetSigmaStepMethod( sigmaStepMethod );
   multiScaleFilter->SetRescale( !rescaleOff );
   multiScaleFilter->SetInput( ctImage );
-  multiScaleFilter->DynamicMultiThreadingOff();
    
 
   // Create Functor function based on selected method and connect to filter

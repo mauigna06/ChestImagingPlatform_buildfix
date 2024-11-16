@@ -37,6 +37,7 @@ template< typename TInputImage, typename TOutputImage >
 MultiScaleGaussianEnhancementImageFilter< TInputImage, TOutputImage >
 ::MultiScaleGaussianEnhancementImageFilter()
 {
+  this->DynamicMultiThreadingOff();
   this->m_NonNegativeHessianBasedMeasure = true;
 
   this->m_SigmaMinimum = 1.0;

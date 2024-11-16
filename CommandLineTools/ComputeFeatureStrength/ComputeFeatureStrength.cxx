@@ -157,7 +157,6 @@ int main( int argc, char *argv[] )
   multiScaleFilter->SetSigmaStepMethod( sigmaStepMethod );
   multiScaleFilter->SetRescale( !rescaleOff );
   multiScaleFilter->SetInput( ctImage );
-  multiScaleFilter->DynamicMultiThreadingOff();
    
 
   // Create Functor function based on selected method and connect to filter
@@ -170,6 +169,7 @@ int main( int argc, char *argv[] )
 	    functor->SetBeta( beta );
 	    functor->SetC( C );
 	    functor->SetBrightObject( true );
+      functor->DynamicMultiThreadingOff();
 
 	  multiScaleFilter->SetUnaryFunctor( functor );
 	}
@@ -180,6 +180,7 @@ int main( int argc, char *argv[] )
 	    functor->SetBeta( beta );
 	    functor->SetC( C );
 	    functor->SetBrightObject( false );
+      functor->DynamicMultiThreadingOff();
 
 	  multiScaleFilter->SetUnaryFunctor( functor );
 	}
@@ -190,6 +191,7 @@ int main( int argc, char *argv[] )
 	    functor->SetBeta( beta );
 	    functor->SetC( C );
 	    functor->SetBrightObject( true );
+      functor->DynamicMultiThreadingOff();
 
 	  multiScaleFilter->SetUnaryFunctor( functor );
 	}
@@ -200,6 +202,7 @@ int main( int argc, char *argv[] )
 	    functor->SetBeta( beta );
 	    functor->SetC( C );
 	    functor->SetBrightObject( false );
+      functor->DynamicMultiThreadingOff();
 
 	  multiScaleFilter->SetUnaryFunctor( functor );
 	}
@@ -269,6 +272,7 @@ int main( int argc, char *argv[] )
 	{
 	  ModifiedKrissianVesselnessFunctorType::Pointer functor = ModifiedKrissianVesselnessFunctorType::New();
 	    functor->SetBrightObject( true );
+      functor->DynamicMultiThreadingOff();
 	  
 	  multiScaleFilter->SetUnaryFunctor( functor );
 	}
@@ -276,6 +280,7 @@ int main( int argc, char *argv[] )
 	{
 	  ModifiedKrissianVesselnessFunctorType::Pointer functor = ModifiedKrissianVesselnessFunctorType::New();
 	    functor->SetBrightObject( false );
+      functor->DynamicMultiThreadingOff();
 	  
 	  multiScaleFilter->SetUnaryFunctor( functor );
 	}
@@ -294,6 +299,7 @@ int main( int argc, char *argv[] )
 	    functor->SetBeta( beta );
 	    functor->SetC( C );
 	    functor->SetBrightObject( true );
+      functor->DynamicMultiThreadingOff();
 	  
 	  multiScaleFilter->SetUnaryFunctor( functor );
 	}
@@ -304,6 +310,7 @@ int main( int argc, char *argv[] )
 	    functor->SetBeta( beta );
 	    functor->SetC( C );
 	    functor->SetBrightObject( false );
+      functor->DynamicMultiThreadingOff();
 	  
 	  multiScaleFilter->SetUnaryFunctor( functor );
 	}

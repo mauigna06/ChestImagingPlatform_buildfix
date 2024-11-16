@@ -54,7 +54,6 @@ MultiScaleGaussianEnhancementImageFilter< TInputImage, TOutputImage >
 
   // Construct GaussianEnhancementImageFilter
   this->m_GaussianEnhancementFilter = SingleScaleFilterType::New();
-  this->m_GaussianEnhancementFilter->DynamicMultiThreadingOff();
 
 } // end Constructor
 
